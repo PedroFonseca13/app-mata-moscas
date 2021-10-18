@@ -19,10 +19,24 @@ function randomPosition() {
 
   const fly = document.createElement('img')
   fly.src = 'img/mosca.png'
-  fly.className = 'fly-1'
+  fly.className = randomSize()
   fly.style.left = positionX + 'px'
   fly.style.top = positionY + 'px'
   fly.style.position = 'absolute'
 
   document.body.appendChild(fly)
+}
+
+function randomSize() {
+  let flies = Math.floor(Math.random() * 3)
+
+  switch (flies) {
+    case 0:
+      return 'fly-1'
+    case 1:
+      return 'fly-2'
+    case 2:
+      return 'fly-3'
+  }
+
 }
