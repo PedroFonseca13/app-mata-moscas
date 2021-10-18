@@ -12,3 +12,12 @@
   height: 90px;
   width: 90px;
 }
+
+
+.side-A {
+  transform: scaleX(1);
+}
+
+.side-B {
+  transform: scaleX(-1);
+}
