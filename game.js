@@ -42,7 +42,9 @@ function randomPosition() {
   fly.style.top = positionY + 'px'
   fly.style.position = 'absolute'
   fly.id = 'fly'
-  fly.onclick = () => this.remove()
+  fly.onclick = function () {
+    this.remove()
+  }
 
   document.body.appendChild(fly)
 }
