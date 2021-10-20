@@ -10,8 +10,21 @@
     <script src="game.js"></script>
   </head>
   <body onresize="ajustaTamanhoPalcoJogo()">
+
+    <div class="panel">
+      <div class="lifes">
+        <img id="life-1" src="img/coracao_cheio.png" alt="">
+        <img id="life-2" src="img/coracao_cheio.png" alt="">
+        <img id="life-3" src="img/coracao_cheio.png" alt="">
+      </div>
+
+      <div class="stopwatch">Tempo restante: <span id="stopwatch"></span></div>
+    </div>
+
     <script>
-      randomPosition()
+      setInterval(() => {
+        randomPosition()
+      }, 1000)
     </script>
   </body>
 </html>
