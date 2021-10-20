@@ -12,7 +12,14 @@ ajustaTamanhoPalcoJogo()
 
 let stopwatch = setInterval(() => {
   time -= 1
-  document.querySelector('span#stopwatch').innerHTML = time
+
+  if (time < 0) {
+    clearInterval(stopwatch)
+    clearInterval(setFly)
+    window.location.href = 'win.html'
+  } else {
+    document.querySelector('span#stopwatch').innerHTML = time
+  }
 }, 1000)
 
 function randomPosition() {
